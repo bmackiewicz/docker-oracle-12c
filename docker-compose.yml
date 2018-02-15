@@ -1,0 +1,10 @@
+db:
+  image: bmackiewicz/oracle-12c:latest
+  ports:
+    - "8080:8080"
+    - "1521:1521"
+  environment:
+    - processes=200
+    - DATABASES=test
+  volumes:
+    - .oracle_data:/u01/app/oracle
